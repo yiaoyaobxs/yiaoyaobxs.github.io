@@ -1,106 +1,157 @@
 <!doctype html>
-<html lang="zh-cmn-Hans"> 
-	<head> 
-		<meta charset="utf-8"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"> 
-		<meta name="renderer" content="webkit"> 
-		<meta name="force-rendering" content="webkit"> 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- MDUI CSS --> 
-		<link rel="stylesheet" href="./css/mdui.min.css"> 
-		<title>Miku's FAN</title> 
-		<style>
-			.search {
-				border-style: solid;
-				border-radius: 5px;
-				background-color: #FFFFFF;
-				opacity: 0.55;
-			}
+<html lang="zh-cmn-Hans">
 
-			.button {
-				border-style: solid;
-				border-radius: 30px;
-				background-color: #5D9BFF;
-				opacity: 0.8;
-			}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+	<meta name="renderer" content="webkit">
+	<meta name="force-rendering" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- MDUI CSS -->
+	<link rel="stylesheet" href="./css/mdui.min.css">
+	<title>Miku's FAN</title>
+	<style>
+		.search {
+			border-style: solid;
+			border-radius: 5px;
+			background-color: #FFFFFF;
+			opacity: 0.55;
+		}
 
-			.sosuo {
-				margin-bottom: 20px;
-			}
-	  
+		.button {
+			border-style: solid;
+			border-radius: 30px;
+			background-color: #5D9BFF;
+			opacity: 0.8;
+		}
+
+		.sosuo {
+			margin-bottom: 20px;
+		}
+
 		body {
-	  		background-image: url('b.png');
-			background-size: 100%
-			background-repeat: no-repeat;
-			background-position: center;
+			background-image: url('background.png');
+			background-size: 100% background-repeat: no-repeat;
+			background-position: right top;
 			animation: fadeInAnimation ease 1.5s;
 			animation-iteration-count: 1;
 			animation-fill-mode: forwards;
 			padding: 1%;
-	 	 }
-	   	@keyframes fadeInAnimation {
-				0% {
-					opacity: 0;
-					/*设置不透明度*/
-				}
+			background-size: cover;
+			background-attachment: fixed
+				/*电脑端图片背景*/
 
-				100% {
-					opacity: 1;
-				}
+		}
+
+		@media(max-width: 768px) {
+			body {
+				background-image: url(' https://go.fuyeor.com/ran/pic ');
+
+				/*手机端图片背景*/
+
 			}
-			</style> 
-	</head> 
-	<body> 
-		<div class="mdui-appbar .mdui-appbar-fixed"> 
-			<div class="mdui-toolbar mdui-color-theme"> <button class="mdui-btn mdui-ripple mdui-drawer=" options" " mdui-drawer=" {target: '#left-drawer' }"><i class="mdui-icon material-icons mdui-ripple">menu</i></button> <a href="javascript:;" class="mdui-typo-headline"> <h5>Miku!</h5> </a> 
-				<div class="mdui-toolbar-spacer"></div> <a href="index.html" class="mdui-btn mdui-btn-icon"> <i class="mdui-icon material-icons mdui-ripple">refresh</i> </a> 
-			</div> 
-		</div> 
-		<div class="mdui-drawer mdui-drawer-close" id="left-drawer"> 
-			<ul class="mdui-list"> 
-				<div style="text-align: center;" class="sosuo"> 
-					<br> 
-					<form action="https://www.baidu.com/s" method="GET" target="_blank"> 
-						<input type="text" name="wd" size="20%" class="search"> 
-						<input type="submit" value="百度一下" class="mdui-ripple button"> 
-						<input type="hidden" name="ie" value="utf-8"> 
-						<input type="hidden" name="tn" value="ace"> 
-					</form> 
-				</div> 
-				<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">home</i> <a href="../index.html"> 
-						<div class="mdui-list-item-content">
-							 主页 
-						</div> </a> </li> 
-				<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i> <a href="../projects/index.html"> 
-						<div class="mdui-list-item-content">
-							 加入我们？！ 
-						</div> </a> </li> 
-				<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">people</i> <a href="about.html"> 
-						<div class="mdui-list-item-content">
-							 关于我们 
-						</div> </a></li> 
-				<hr> 
-				<li class="mdui-list-item"> 
-					<div> 
-						<p class="">Copyright © Miku's FAN</p> 
-					</div> </li> 
-			</ul> 
-		</div> <!-- 主内容 --> 
-		<div class="mdui-typo" style="text-align: center;"> 
-			<div class="mdui-typo-display-2" style="color: #FFE500;">
-				 欢迎! 
-			</div> 
-			<div> 
-				<img src="logo.jpg" style="border-radius: 100%;"> 
-			</div> 
-			<div class="mdui-typo-display-2" style="color: #4578FF;">
-				 Miku's FAN 
-			</div> 
-			<div style="padding: 3%;"> 
-				<h3 class="hitokoto" id="chatp"></h3> 
-				<h5 class="from"></h5> 
-				<script src="https://v1.hitokoto.cn?encode=js&&max_length=16"></script> 
-			</div> <!-- MDUI JavaScript --> 
-			<script src="./js/mdui.min.js"></script> 
-		</div>  
-	</body>
+		}
+
+		/* url 里的地址换成你的图片地址，手机和电脑图片不同*/
+		/* https://go.fuyeor.com/ran/pic 必应每日图片接口 */
+
+		@keyframes fadeInAnimation {
+			0% {
+				opacity: 0;
+				/*设置不透明度*/
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="mdui-appbar .mdui-appbar-fixed">
+		<div class="mdui-toolbar mdui-color-theme"> <button class="mdui-btn mdui-ripple mdui-drawer="
+				options" " mdui-drawer=" {target: '#left-drawer' }"><i
+					class="mdui-icon material-icons mdui-ripple">menu</i></button> <a href="javascript:;"
+				class="mdui-typo-headline">
+				<h5 style="color: #FFFFFF;">Miku!</h5>
+			</a>
+			<div class="mdui-toolbar-spacer"></div> <a href="index.html" class="mdui-btn mdui-btn-icon"> <i
+					class="mdui-icon material-icons mdui-ripple">refresh</i> </a>
+		</div>
+	</div>
+	<div class="mdui-drawer mdui-drawer-close mdui-color-amber" id="left-drawer">
+		<ul class="mdui-list">
+			<div style="text-align: center;" class="sosuo">
+				<br>
+				<form action="https://www.baidu.com/s" method="GET" target="_blank">
+					<input type="text" name="wd" size="10%" class="search">
+					<input type="submit" value="百度一下" class="mdui-ripple button">
+					<input type="hidden" name="ie" value="utf-8">
+					<input type="hidden" name="tn" value="ace">
+				</form>
+			</div>
+			<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">home</i> <a
+					href="../index.html">
+					<div class="mdui-list-item-content">
+						主页
+					</div>
+				</a> </li>
+			<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i>
+				<a href="../projects/index.html">
+					<div class="mdui-list-item-content">
+						加入我们？！
+					</div>
+				</a>
+			</li>
+			<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">chat</i> <a
+					href="pages/board.html">
+					<div class="mdui-list-item-content">
+						要留言嘛?~
+					</div>
+				</a> </li>
+			<li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+				<a href="about.html">
+					<div class="mdui-list-item-content">
+						关于我们
+					</div>
+				</a>
+			</li>
+			<hr>
+			<li class="mdui-list-item">
+				<div class="mdui-ripple">
+					<p class="mdui-ripple">Copyright © Miku's FAN</p>
+				</div>
+			</li>
+		</ul>
+	</div> <!-- 主内容 -->
+	<div class="mdui-typo" style="text-align: center;">
+		<div class="mdui-typo-display-2" style="color: #FFE500;">
+			欢迎!
+		</div>
+		<div>
+			<img src="logo.jpg" style="border-radius: 100%;">
+		</div>
+		<div class="mdui-typo-display-2" style="color: #ffffff;">
+			Miku's FAN
+		</div>
+		<div style="padding: 3%;">
+			<h3 class="hitokoto" id="chatp" style="color: #FFE500;"></h3>
+			<h5 class="from"></h5>
+			<script src="https://v1.hitokoto.cn?encode=js&&max_length=16"></script>
+		</div>
+		<div class="mdui-card mdui-center" style="width: 40%;height: 60%;">
+			<div class="mdui-card-content">
+				<div class="mdui-chip">
+					<span class="mdui-chip-title">Hentai</span>
+				</div>
+				<div class="mdui-chip">
+					<span class="mdui-chip-title">聊天～</span>
+				</div>
+			</div>
+		</div>
+		<!-- MDUI JavaScript -->
+		<script src="./js/mdui.min.js"></script>
+	</div>
+</body>
+
 </html>
